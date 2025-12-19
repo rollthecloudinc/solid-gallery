@@ -1,6 +1,7 @@
 import { ContentPlugin } from '@rollthecloudinc/content';
 import { DownloadComponent } from './download.component';
 import { DownloadContentHandler } from './handlers/download-content.handler';
+import { StylePlugin } from '@rollthecloudinc/panels';
 
 export const pluginDownloadContentPluginFactory  = ({ handler }: { handler: DownloadContentHandler }) => {
   return new ContentPlugin<string>({
@@ -12,3 +13,13 @@ export const pluginDownloadContentPluginFactory  = ({ handler }: { handler: Down
     handler
   } as any);
 };
+
+
+export const pluginGalleryStylePluginFactory  = () => {
+  return new StylePlugin<string>({
+    id: 'gallery_gallery',
+    title: 'Gallery',
+    editorComponent: undefined,
+    renderComponent: DownloadComponent,
+  } as any);
+}

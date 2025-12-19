@@ -19,7 +19,10 @@ module.exports = withNativeFederation({
     }),
   },
 
-  skip: ['rxjs'],
+  skip: [
+    'rxjs'
+    ,'cssjson'
+  ],
 
   features: {
     // New feature for more performance and avoiding
