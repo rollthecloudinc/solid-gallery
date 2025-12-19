@@ -5,6 +5,7 @@ module.exports = withNativeFederation({
   
   exposes: {
     './DownloadModule': './projects/plugin/src/app/download.module.ts',
+    './GalleryModule': './projects/plugin/src/app/gallery.module.ts',
     './Download': './projects/plugin/src/app/download.component.ts',
     './Upload': './projects/plugin/src/app/upload.component.ts'
   },
@@ -20,8 +21,9 @@ module.exports = withNativeFederation({
   },
 
   skip: [
-    'rxjs'
-    ,'cssjson'
+    'rxjs',
+    'cssjson',
+    'ng-gallery'
   ],
 
   features: {

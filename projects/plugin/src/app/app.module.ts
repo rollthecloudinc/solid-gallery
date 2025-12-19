@@ -4,10 +4,12 @@ import { AppComponent } from './app.component';
 import { DownloadComponent } from './download.component';
 import { UploadComponent } from './upload.component';
 import { DownloadModule } from './download.module';
+import { GalleryModule } from './gallery.module';
 @NgModule({
   imports: [
     BrowserModule,
-    DownloadModule
+    DownloadModule,
+    GalleryModule
   ],
   declarations: [
     AppComponent,
