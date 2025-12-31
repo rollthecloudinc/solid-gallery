@@ -1,0 +1,14 @@
+name: On Core Version Updated
+
+on:
+  repository_dispatch:
+    types: [core_version_updated]
+
+jobs:
+  run-update:
+    uses: rollthecloudinc/quell/.github/workflows/update-core-packages.yml@master
+    with:
+      version: ${{ github.event.client_payload.version }}
+    secrets:
+      NODE_AUTH_TOKEN: ${{ secrets.RTC_GITHUB_REGISTRY }}
+      GITHUB_PAT: ${{ secrets.RTC_GITHUB_REGISTRY }}
